@@ -1,4 +1,4 @@
-package com.ksoft.config;
+package com.ksoft.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,5 +12,9 @@ public class Controllers {
 		/*ModelAndView modelAndView=new ModelAndView();
 		modelAndView.addObject("welcome");*/
 		return "welcome";
+	}
+	@RequestMapping(value="/registration.htm",method=RequestMethod.GET)
+	public String showRegistration() {
+		return "registration";
 	}
 }

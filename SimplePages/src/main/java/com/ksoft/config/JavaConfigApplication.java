@@ -6,19 +6,16 @@ public class JavaConfigApplication extends AbstractAnnotationConfigDispatcherSer
 
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
-		// TODO Auto-generated method stub
 		return new Class<?> [] {RootConfig.class};
 	}
 
 	@Override
 	protected Class<?>[] getServletConfigClasses() {
-		
 		return new Class<?>[] {WebMvcConfig.class};
 	}
 
 	@Override
 	protected String[] getServletMappings() {
-		
 		return new String[] {"*.htm"};
 	}
 

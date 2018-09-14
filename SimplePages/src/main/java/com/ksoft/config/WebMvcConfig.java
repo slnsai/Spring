@@ -6,21 +6,25 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.ViewResolverRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 @EnableWebMvc
 @Configuration
-@ComponentScan(basePackages="com.ksoft")
-public class WebMvcConfig extends WebMvcConfigurationSupport {
+@ComponentScan(basePackages= {"com.ksoft.controllers"})
+public class WebMvcConfig extends WebMvcConfigurerAdapter
+{
 
 	/*@Override
-	protected void addViewControllers(ViewControllerRegistry registry) {
-		registry.addRedirectViewController("welcome.htm", "welcome");
-
+	public void addViewControllers(ViewControllerRegistry registry) 
+	{
+		registry.addViewController("/welcome.htm").setViewName("welcome");
+		registry.addViewController("/registration.htm").setViewName("registration");
+		
 	}*/
 
 	@Override
-	protected void configureViewResolvers(ViewResolverRegistry registry) {
-		registry.jsp().prefix("/WEB-INF/view/").suffix(".jsp");
+	public void configureViewResolvers(ViewResolverRegistry registry) {
 		
+		registry.jsp("/WEB-INF/view/", ".jsp");
 	}
 	
 }

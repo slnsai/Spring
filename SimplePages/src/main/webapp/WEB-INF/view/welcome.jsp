@@ -8,5 +8,6 @@
 </head>
 <body>
 		<h1>Welcome to Home Page</h1>
+		<a href="${pageContext.request.contextPath}/registration.htm" >Registration</a>
 </body>
 </html>
