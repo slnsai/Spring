@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class ControllerSample {
-		@RequestMapping(method=RequestMethod.GET,name="/welcome.htm")
+		@RequestMapping(name="/welcome.htm",method=RequestMethod.GET)
 		public String showPage() {
 			System.out.println("controller");
 		return "welcome";

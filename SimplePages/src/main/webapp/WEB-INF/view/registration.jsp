@@ -10,9 +10,13 @@
 	<form action="">
 		<table>
 			<tr>
-				<td><input type="text" name="username" placeholder="username"/></td>
-				<td><input type="password" name="password" placeholder="password"/></td>
-				<td><input type="submit" value="submit"/></td>
+				<td>Name:<input type="text" name="username" placeholder="username"/></td>
+			</tr>
+			<tr>
+				<td>Password:<input type="password" name="password" placeholder="password"/></td>
+			</tr>
+			<tr>
+				<td style="align-content: center;"><input type="submit" value="submit"/></td>
 			</tr>
 		</table>
 	</form>
